@@ -55,7 +55,7 @@ Você pode baixar o aplicativo e instalar diretamente no seu dispositivo Android
 ## 👥 Autores
 
 - **Ryan**  
-- **Dayvidson**  
+- **Deyvidson**  
 - **Milleny**  
 - **Vitor**  
 - **Yasmin**  
