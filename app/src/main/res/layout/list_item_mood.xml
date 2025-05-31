@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Ícone baseado no enum -->
+    <ImageView
+        android:id="@+id/imageMood"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Imagem representando o humor" />
+
+    <!-- Área de texto -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- Data e hora no canto superior direito -->
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:textColor="#FAFAFA"
+            android:text="2025-05-28 13:45" />
+
+        <!-- Título à esquerda, abaixo da data -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDate"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="Humor do Dia" />
+
+        <!-- Texto longo abaixo do título -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:textColor="#FAFAFA"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:text="Descrição do humor aqui..." />
+    </RelativeLayout>
+</LinearLayout>

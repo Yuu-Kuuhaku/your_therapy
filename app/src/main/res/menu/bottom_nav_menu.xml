@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Início" />
+    <item
+        android:id="@+id/nav_gym"
+        android:icon="@drawable/ic_gym"
+        android:title="Exercícios" />
+    <item
+        android:id="@+id/nav_article"
+        android:icon="@drawable/ic_article"
+        android:title="Frases" />
+    <item
+        android:id="@+id/nav_historic"
+        android:icon="@drawable/ic_task"
+        android:title="Histórico" />
+    <item
+        android:id="@+id/nav_sign_out"
+        android:icon="@drawable/ic_sign_out"
+        android:title="Sair" ></item>
+</menu>
