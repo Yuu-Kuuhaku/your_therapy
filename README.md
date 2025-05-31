@@ -52,9 +52,14 @@ Você pode baixar o aplicativo e instalar diretamente no seu dispositivo Android
 
 3. Compile e execute em um dispositivo físico ou emulador.
 
-## 👤 Autor
+## 👥 Autores
 
-Desenvolvido por Eustáquio Ferreira
+- **Ryan**  
+- **Dayvidson**  
+- **Milleny**  
+- **Vitor**  
+- **Yasmin**  
+- **Eustáquio**
 
 Curso de Sistemas de Informação – Anhanguera - DIVINOPOLIS/MG
 
