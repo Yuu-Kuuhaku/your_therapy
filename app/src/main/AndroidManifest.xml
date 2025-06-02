@@ -16,6 +16,7 @@
         <activity
             android:name=".Historico"
             android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -23,6 +24,7 @@
         </activity>
         <activity
             android:name=".Frases"
+            android:screenOrientation="portrait"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -30,6 +32,7 @@
         </activity>
         <activity
             android:name=".TelaExercicios"
+            android:screenOrientation="portrait"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -37,6 +40,7 @@
         </activity>
         <activity
             android:name=".Objetivo"
+            android:screenOrientation="portrait"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -45,6 +49,7 @@
         <activity
             android:name=".TelaInicio"
             android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -53,6 +58,7 @@
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

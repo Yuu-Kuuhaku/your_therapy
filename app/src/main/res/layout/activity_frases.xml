@@ -13,11 +13,23 @@
         android:layout_height="731dp"
         android:alpha="0.2"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/idTextFrases"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTextFrases"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/asdaf" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="CENTRO DE VALORIZAÇÃO DA VIDA - LIGUE 188"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/idBottomNavFrases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/idTextFrases"
@@ -43,6 +55,8 @@
         android:layout_width="147dp"
         android:layout_height="65dp"
         android:text="Gerar Frase Motivacional"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +67,7 @@
         android:id="@+id/idImgBtnVoltarFrases"
         android:layout_width="130dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/fab_transformation_sheet_behavior"

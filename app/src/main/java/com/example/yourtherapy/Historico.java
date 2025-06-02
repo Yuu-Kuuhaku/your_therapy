@@ -24,7 +24,15 @@ public class Historico extends AppCompatActivity {
     private ArrayAdapter<MoodEntry> adapter;      // Adapter para conectar os dados com a lista
     private List<MoodEntry> moodList;          // Lista de Sentimentos salvos
 
+    private BottomNavigationView bottomNav;
     private String userName;
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        bottomNav.setSelectedItemId(R.id.nav_historic); // ou o ID correspondente àquela tela
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,28 +66,27 @@ public class Historico extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // Abrir a tela em questão
-                Intent intent = new Intent(Historico.this, TelaInicio.class);
-
-                // Inicia a nova Activity
-                startActivity(intent);
+                finish();
             }
         });
 
-        BottomNavigationView bottomNav = findViewById(R.id.idBottomNavHistorico);
+        bottomNav = findViewById(R.id.idBottomNavHistorico);
         bottomNav.setSelectedItemId(R.id.nav_historic); // marca como selecionado
 
         bottomNav.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.nav_home:
+
                     startActivity(new Intent(this, TelaInicio.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_gym:
+
                     startActivity(new Intent(this, TelaExercicios.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_article:
+
                     startActivity(new Intent(this, Frases.class));
                     overridePendingTransition(0, 0);
                     return true;

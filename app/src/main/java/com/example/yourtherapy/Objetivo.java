@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Objetivo extends AppCompatActivity {
 
-    private Button iniciar;
+    private ImageButton btnVoltarObjetivo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,18 +17,13 @@ public class Objetivo extends AppCompatActivity {
         setContentView(R.layout.activity_objetivo);
 
         // Iniciar o botão que leva até a tela de login novamente
-        iniciar = findViewById(R.id.idBtnIniciar);
+        btnVoltarObjetivo = findViewById(R.id.idImgBtnVoltarObjetivo);
 
         // Ação do botão
-        iniciar.setOnClickListener(new View.OnClickListener() {
+        btnVoltarObjetivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Abrir a tela em questão
-                Intent intent = new Intent(Objetivo.this, MainActivity.class);
-
-                // Inicia a nova Activity
-                startActivity(intent);
+                finish();
             }
         });
     }

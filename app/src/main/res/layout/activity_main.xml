@@ -39,6 +39,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/idEditTextTextPersonName"
         app:layout_constraintStart_toStartOf="@+id/idEditTextTextPersonName"
@@ -55,7 +58,7 @@
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFDFD"
         app:layout_constraintBottom_toTopOf="@+id/idBtnLogin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/idEditTextTextPersonName"
         app:layout_constraintStart_toStartOf="@+id/idEditTextTextPersonName" />
 
@@ -79,12 +83,12 @@
         android:backgroundTint="#548B3A"
         android:shadowColor="#538A39"
         android:text="Informações gerais"
-        android:textColor="#07450A"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FEFEFE"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnLogin"
+        app:layout_constraintStart_toStartOf="@+id/idBtnLogin"
         app:layout_constraintTop_toBottomOf="@+id/idBtnLogin"
         app:layout_constraintVertical_bias="0.874" />
 

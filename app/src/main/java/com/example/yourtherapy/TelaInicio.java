@@ -29,8 +29,15 @@ public class TelaInicio extends AppCompatActivity {
     private EditText editTextDesabafe;
     private int image_id = 0 ;
 
+    private  BottomNavigationView bottomNav;
     private String userName;
 
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        bottomNav.setSelectedItemId(R.id.nav_home); // ou o ID correspondente àquela tela
+    }
 
 
     @Override
@@ -68,7 +75,7 @@ public class TelaInicio extends AppCompatActivity {
 
         // Inicializa o componente de navegação inferior (BottomNavigationView)
         // Esse é o menu que aparece na parte de baixo da tela com ícones para navegar entre as telas do app
-        BottomNavigationView bottomNav = findViewById(R.id.idBottomNavHome);
+        bottomNav = findViewById(R.id.idBottomNavHome);
 
         // Define que o item "home" estará selecionado como padrão ao abrir essa tela
         bottomNav.setSelectedItemId(R.id.nav_home);
@@ -80,18 +87,22 @@ public class TelaInicio extends AppCompatActivity {
                     // Já estamos na tela "Home", então não é necessário fazer nada
                     return true;
                 case R.id.nav_gym:
+
                     // Cria uma intenção (Intent) para abrir a tela de exercícios (TelaExercicios)
                     startActivity(new Intent(this, TelaExercicios.class));
                     // Remove a animação padrão de transição entre telas, tornando a troca mais suave
                     overridePendingTransition(0, 0);
+
                     return true;
                 case R.id.nav_article:
+
                     // Cria uma intenção (Intent) para abrir a tela de frases (Frases)
                     startActivity(new Intent(this, Frases.class));
                     // Remove a animação padrão de transição entre telas, tornando a troca mais suave
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_historic:
+
                     // Cria uma intenção (Intent) para abrir a tela de histórico (Historico)
                     startActivity(new Intent(this, Historico.class));
                     // Remove a animação padrão de transição entre telas, tornando a troca mais suave

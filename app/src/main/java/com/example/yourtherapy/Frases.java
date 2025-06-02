@@ -24,6 +24,15 @@ public class Frases extends AppCompatActivity {
     private List<String> motivationalPhrases; // Novo: Lista para armazenar as frases motivacionais
     private Random random; // Novo: Objeto Random para selecionar frases aleatoriamente
 
+    private BottomNavigationView bottomNav;
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        bottomNav.setSelectedItemId(R.id.nav_article); // ou o ID correspondente àquela tela
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +45,7 @@ public class Frases extends AppCompatActivity {
         btnVoltarFrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir a tela em questão
-                Intent intent = new Intent(Frases.this, TelaInicio.class);
-                // Inicia a nova Activity
-                startActivity(intent);
+               finish();
             }
         });
 
@@ -75,24 +81,25 @@ public class Frases extends AppCompatActivity {
                 idTextFrases.setText(randomPhrase);
             }
         });
-
-        // Configuração da Bottom Navigation View (existente no seu código)
-        BottomNavigationView bottomNav = findViewById(R.id.idBottomNavFrases);
+        bottomNav = findViewById(R.id.idBottomNavFrases);
         bottomNav.setSelectedItemId(R.id.nav_article); // marca como selecionado
 
         bottomNav.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.nav_home:
+
                     startActivity(new Intent(this, TelaInicio.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_gym:
+
                     startActivity(new Intent(this, TelaExercicios.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_article:
                     return true; // já está nesta tela
                 case R.id.nav_historic:
+
                     startActivity(new Intent(this, Historico.class));
                     overridePendingTransition(0, 0);
                     return true;

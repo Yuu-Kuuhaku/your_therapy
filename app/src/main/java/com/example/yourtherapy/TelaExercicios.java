@@ -15,6 +15,14 @@ public class TelaExercicios extends AppCompatActivity {
 
     private ImageButton btnVoltarExerc;
 
+    private  BottomNavigationView bottomNav;
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        bottomNav.setSelectedItemId(R.id.nav_gym); // ou o ID correspondente àquela tela
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,30 +36,30 @@ public class TelaExercicios extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // Abrir a tela em questão
-                Intent intent = new Intent(TelaExercicios.this, TelaInicio.class);
-
-                // Inicia a nova Activity
-                startActivity(intent);
+                finish();
             }
         });
 
-        BottomNavigationView bottomNav = findViewById(R.id.idBottomNavExercicios);
+
+        bottomNav = findViewById(R.id.idBottomNavExercicios);
         bottomNav.setSelectedItemId(R.id.nav_gym); // marca como selecionado
 
         bottomNav.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.nav_home:
+
                     startActivity(new Intent(this, TelaInicio.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_gym:
                     return true; // já está nesta tela
                 case R.id.nav_article:
+
                     startActivity(new Intent(this, Frases.class));
                     overridePendingTransition(0, 0);
                     return true;
                 case R.id.nav_historic:
+
                     startActivity(new Intent(this, Historico.class));
                     overridePendingTransition(0, 0);
                     return true;

@@ -123,6 +123,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Salvar"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/idEditTextDesabafe"
         app:layout_constraintStart_toStartOf="@+id/idEditTextDesabafe"
         app:layout_constraintTop_toBottomOf="@+id/idEditTextDesabafe" />
@@ -136,5 +139,16 @@
         app:layout_constraintEnd_toEndOf="@+id/idSpinnerSentindo"
         app:layout_constraintStart_toStartOf="@+id/idSpinnerSentindo"
         app:layout_constraintTop_toBottomOf="@+id/idBtnImgSentimento" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CENTRO DE VALORIZAÇÃO DA VIDA - LIGUE 188"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnSalvarSentimento"
+        app:layout_constraintStart_toStartOf="@+id/idBtnSalvarSentimento"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnSalvarSentimento" />
 
 </android.support.constraint.ConstraintLayout>
