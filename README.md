@@ -48,9 +48,17 @@ Você pode baixar o aplicativo e instalar diretamente no seu dispositivo Android
    ```bash
    git clone https://github.com/Yuu-Kuuhaku/your_therapy.git
    ```
+   
 2. Abra o projeto no Android Studio.
 
-3. Compile e execute em um dispositivo físico ou emulador.
+3. **Faça uma limpeza e reconstrução do projeto para evitar erros de build:**
+
+   - Vá até o menu superior e clique em **Build > Clean Project**
+   - Em seguida, clique em **Build > Rebuild Project**
+
+4. Conecte um dispositivo físico ou inicie um emulador Android (API 27 a 32 recomendada).
+
+5. Clique em **Run > Run 'app'** para compilar e executar o aplicativo.
 
 ## 👥 Autores
 
